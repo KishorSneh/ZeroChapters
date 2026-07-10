@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Nothing to Read is a lightweight illustrated media discovery wall powered by AniList."
+    >
+    <title>Nothing to Read</title>
+    <link rel="stylesheet" href="layout.css">
+    <script src="reader-discovery.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell" aria-live="polite" aria-busy="true">
+      <header class="app-header" aria-label="Main Navigation">
+        <div class="brand-title">
+          <span class="brand-name">Nothing to Read</span>
+        </div>
+
+        <nav class="category-nav" aria-label="Media Categories">
+          <button class="category-pill" type="button" data-category="MANGA">Manga</button>
+          <button class="category-pill is-active" type="button" data-category="MANHWA">Manhwa</button>
+          <button class="category-pill" type="button" data-category="MANHUA">Manhua</button>
+          <button class="category-pill" type="button" data-category="NOVEL">Light Novels</button>
+        </nav>
+
+        <div class="top-controls" aria-label="Display controls">
+          <button class="control-btn" type="button" aria-label="Shuffle wall" data-shuffle title="Shuffle Wall">↻</button>
+          <button class="control-btn" type="button" aria-label="Favorites" data-favorites-toggle title="View Favorites">♥</button>
+          <button class="control-btn" type="button" aria-label="Info" data-info title="About">ℹ</button>
+          <button class="control-btn" type="button" aria-label="Settings" data-settings-toggle aria-expanded="false" title="Settings">⚙</button>
+          <button class="control-btn" type="button" aria-label="Toggle theme" data-theme-toggle title="Toggle Theme">☾</button>
+        </div>
+      </header>
+
+      <section class="poster-field" aria-label="Dense media cover wall">
+        <div class="poster-wall" data-grid></div>
+      </section>
+
+      <aside class="detail-card" data-detail>
+        <div class="detail-backdrop" data-detail-backdrop></div>
+        <div class="detail-content">
+          <div class="detail-heading">
+            <div>
+              <h1 data-detail-title>Nothing to Read</h1>
+              <p class="detail-subtitle" data-detail-subtitle>Loading shelf</p>
+            </div>
+            <div class="score-ring" data-detail-score>
+              <span>--</span>
+            </div>
+          </div>
+
+          <ul class="genre-row" data-detail-genres aria-label="Genres"></ul>
+          <p class="detail-description" data-detail-description>
+            Pulling covers into the wall.
+          </p>
+
+          <div class="detail-actions">
+            <a class="action-button" data-detail-link href="#" target="_blank" rel="noreferrer">AL</a>
+            <button class="action-button" type="button" data-mal title="View on MyAnimeList">MAL</button>
+            <button class="action-button square" type="button" data-next title="Next Title">+</button>
+            <button class="action-button square" type="button" data-favorite aria-label="Save title" title="Favorite">&hearts;</button>
+            <button class="action-button close" type="button" data-close>Close</button>
+          </div>
+        </div>
+      </aside>
+
+      <section class="settings-panel" data-settings-panel hidden aria-label="Settings">
+        <p>Category</p>
+        <div class="settings-options">
+          <button type="button" data-category-opt="MANGA">Manga</button>
+          <button class="is-active" type="button" data-category-opt="MANHWA">Manhwa</button>
+          <button type="button" data-category-opt="MANHUA">Manhua</button>
+          <button type="button" data-category-opt="NOVEL">Light Novels</button>
+        </div>
+      </section>
+
+      <!-- Info Modal -->
+      <div class="modal-backdrop" data-info-modal hidden>
+        <div class="modal-card">
+          <div class="modal-header">
+            <h2>About Nothing to Read</h2>
+            <button class="modal-close" type="button" data-info-close aria-label="Close modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Nothing to Read</strong> is a visual, lightweight illustrated media discovery wall powered by AniList's live GraphQL API.</p>
+            <h3>Controls & Shortcuts</h3>
+            <ul>
+              <li><strong>Hover or Click</strong> any cover to inspect full details and synopsis.</li>
+              <li><strong>AL / MAL</strong>: Open the title directly on AniList or MyAnimeList.</li>
+              <li><strong>&hearts; Favorite</strong>: Save your favorite titles locally in your browser.</li>
+              <li><strong>↻ Shuffle</strong>: Randomize the wall layout anytime.</li>
+              <li><strong>☾ Theme</strong>: Toggle smooth dark & light modes.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Favorites Modal -->
+      <div class="modal-backdrop" data-favorites-modal hidden>
+        <div class="modal-card modal-card-wide">
+          <div class="modal-header">
+            <h2>Saved Favorites (<span data-favorites-count>0</span>)</h2>
+            <div class="modal-header-actions">
+              <button class="action-button" type="button" data-favorites-clear>Clear All</button>
+              <button class="modal-close" type="button" data-favorites-close aria-label="Close favorites">&times;</button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="favorites-grid" data-favorites-grid></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="status-message" data-status hidden></div>
+    </main>
+  </body>
+</html>
