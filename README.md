@@ -1,4 +1,4 @@
-# Nothing to Read ✦
+# Nothing to Read 
 
 A lightweight, premium illustrated media discovery wall powered by AniList's public GraphQL API.
 
