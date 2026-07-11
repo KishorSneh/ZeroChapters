@@ -1,8 +1,8 @@
-# Nothing to Read 
+# ZeroChapters
 
 A lightweight, premium illustrated media discovery wall powered by AniList's public GraphQL API.
 
-**Nothing to Read** transforms your screen into a rich, full-screen mosaic of manga, manhwa, manhua, and light novel covers. Hover or click any poster to reveal a dynamic, 3D-tilting detail card displaying synopses, scores, genres, and interactive external resource links.
+**ZeroChapters** transforms your screen into a rich, full-screen mosaic of manga, manhwa, manhua, and light novel covers. Hover or click any poster to reveal a dynamic, 3D-tilting detail card displaying synopses, scores, genres, and interactive external resource links.
 
 ---
 
